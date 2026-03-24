@@ -78,15 +78,15 @@ The tester initialises a light 5-inch race quad (`initStateDefaults`). Key param
 | Motor arm length | ~67 mm (≈ 5 inch) |
 | Ambient temperature | 25 °C |
 
-RC channels are initialised with throttle low and all other channels centred (Betaflight 1000–2000 µs range). The arm switch (channel 5) is set to disarmed (`1000`).
+RC channels are initialised with throttle low and all other channels centred. Values are normalised floats in the range **-1.0 to 1.0**, which the library maps internally to the Betaflight 1000–2000 µs range (`-1 → 1000`, `0 → 1500`, `1 → 2000`). The arm switch (channel 5) is set to disarmed (`-1.0`).
 
 | Channel | Function | Default |
 |---|---|---|
-| 1 | Roll | 1500 |
-| 2 | Pitch | 1500 |
-| 3 | Throttle | 1000 (low) |
-| 4 | Yaw | 1500 |
-| 5 | Arm switch | 1000 (disarmed) |
+| 1 | Roll | 0.0 (centered) |
+| 2 | Pitch | 0.0 (centered) |
+| 3 | Throttle | -1.0 (low) |
+| 4 | Yaw | 0.0 (centered) |
+| 5 | Arm switch | -1.0 (disarmed) |
 
 ---
 

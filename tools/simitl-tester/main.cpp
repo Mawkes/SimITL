@@ -99,15 +99,15 @@ void initInputDefaults(StateInput& s)
   // 16.6 ms 60 fps
   s.delta = 0.016f;
 
-  // RC channels: throttle (ch2) low, others centered (betaflight 1000-2000 range)
-  s.rcData[0] = 1500.0f; // roll
-  s.rcData[1] = 1500.0f; // pitch
-  s.rcData[2] = 1000.0f; // throttle (low)
-  s.rcData[3] = 1500.0f; // yaw
-  s.rcData[4] = 1000.0f; // arm switch (disarmed)
-  s.rcData[5] = 1000.0f;
-  s.rcData[6] = 1000.0f;
-  s.rcData[7] = 1000.0f;
+  // RC channels: -1.0 to 1.0 (mapped internally to Betaflight 1000-2000 range)
+  s.rcData[0] =  0.0f; // roll    (centered)
+  s.rcData[1] =  0.0f; // pitch   (centered)
+  s.rcData[2] = -1.0f; // throttle (low)
+  s.rcData[3] =  0.0f; // yaw     (centered)
+  s.rcData[4] = -1.0f; // arm switch (disarmed)
+  s.rcData[5] = -1.0f;
+  s.rcData[6] = -1.0f;
+  s.rcData[7] = -1.0f;
 
   // Identity rotation matrix
   s.rotation[0] = { 1.0f, 0.0f, 0.0f };

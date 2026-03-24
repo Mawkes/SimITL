@@ -90,6 +90,7 @@ struct StateInit{
 struct StateInput{
   float delta = 0.0f;
 
+  // Normalised RC channel values in the range -1.0 to 1.0.
   float rcData[8] {};
 
   Vec3F position {};
