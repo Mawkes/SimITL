@@ -23,7 +23,7 @@ struct Vec3F{
 };
 
 struct Vec4F{
-  float x = 1.0f;
+  float x = 0.0f;  // Identity quaternion: (x,y,z)=0, w=1
   float y = 0.0f;
   float z = 0.0f;
   float w = 1.0f;

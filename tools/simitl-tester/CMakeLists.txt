@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.3)
+cmake_minimum_required(VERSION 3.5)
 # Test tool to instrument SimITL process without a game client
 
 set(SOURCE_FILES
@@ -32,4 +32,5 @@ target_link_libraries(simitl-tester PUBLIC
   SimITL
   sitl
 )
+
 
